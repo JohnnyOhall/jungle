@@ -1,2 +1,29 @@
-<h1>Admin::Dashboard#show</h1>
-<p>Find me in app/views/admin/dashboard/show.html.erb</p>
+<h1>Admin Dashboard</h1>
+<br>
+<div class="panel panel-default items">
+  <table class="table table-bordered table-hover">
+    <thead>
+      <tr>
+        <th>Category</th>
+        <th>Count</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td> Total products: </td>
+        <td> <%= @product_count %></h3> </td>
+      <tr>
+      <tr>
+        <td> Total categories: </td>
+        <td> <%= @category_count %></h3> </td>
+      <tr>
+      <tr>
+        <td> Total stock: </td>
+        <td> <%= @item_count %></h3> </td>
+      <tr>
+    </tbody>
+  </table>
+</div>
+<br>
+<a href="/admin/products" class="btn btn-primary">See All Products</a>
