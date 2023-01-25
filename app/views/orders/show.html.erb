@@ -21,14 +21,7 @@
         </thead>
         <tbody>
           <% @order.line_items.each do |item| %>
-            <tr>
-              <td><%= item.product.name %></td>
-              <td><%= item.product.description %></td>
-              <td><img src=<%= item.product.image%> heigh="100" width="100"></td>
-              <td class="text-center"><%= humanized_money_with_symbol item.product.price_cents / 100.0 %></td>
-              <td class="text-center"><%= item.quantity%> 
-              <td class="text-center"><%= humanized_money_with_symbol item.product.price_cents / 100.0 * item.quantity%>
-            </tr>
+          <%= render 'line_items', product: item.product, quantity: item[:quantity] %>
           <% end %>
         </tbody>
         <tfoot>

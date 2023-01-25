@@ -1,0 +1,8 @@
+<tr>
+  <td><%= product.name %></td>
+  <td><%= product.description %></td>
+  <td><img src=<%= product.image%> heigh="100" width="100"></td>
+  <td class="text-center"><%= humanized_money_with_symbol product.price_cents / 100.0 %></td>
+  <td class="text-center"><%= quantity%> 
+  <td class="text-center"><%= humanized_money_with_symbol product.price_cents / 100.0 * quantity%>
+</tr>
